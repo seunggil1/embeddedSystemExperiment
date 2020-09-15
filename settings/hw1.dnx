@@ -31,7 +31,7 @@
         <MultiCoreRunAll>1</MultiCoreRunAll>
     </Simulator>
     <DebugChecksum>
-        <Checksum>1165237719</Checksum>
+        <Checksum>3996831625</Checksum>
     </DebugChecksum>
     <Exceptions>
         <StopOnUncaught>_ 0</StopOnUncaught>
@@ -134,8 +134,12 @@
         <Category>_ 0</Category>
     </LogFile>
     <Aliases>
-        <Count>0</Count>
-        <SuppressDialog>0</SuppressDialog>
+        <A0>_ "C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\Libraries\CMSIS\DeviceSupport\Startup\startup_stm32f10x_cl.s" ""</A0>
+        <A1>_ "C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\Libraries\CMSIS\DeviceSupport\system_stm32f10x.c" ""</A1>
+        <A2>_ "C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\user\main.c" ""</A2>
+        <A3>_ "C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\user\stm32f10x_it.c" ""</A3>
+        <Count>4</Count>
+        <SuppressDialog>1</SuppressDialog>
     </Aliases>
     <DriverProfiling>
         <Enabled>0</Enabled>

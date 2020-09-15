@@ -1,29 +1,29 @@
-"C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\Libraries\STM32F10x_StdPeriph_Driver_v3.5\src\stm32f10x_sdio.c"
+"C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\Libraries\STM32F10x_StdPeriph_Driver_v3.5\src\stm32f10x_sdio.c"
 -std=c11
 -ferror-limit=0
 -fbracket-depth=512
 -funsigned-char
 -MD
 -MF
-C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\Debug\Obj\stm32f10x_sdio.pbi.dep
+C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\Debug\Obj\stm32f10x_sdio.pbi.dep
 -o
 stm32f10x_sdio.pbi
 -I
-C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\Libraries\STM32F10x_StdPeriph_Driver_v3.5\src
+C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\Libraries\STM32F10x_StdPeriph_Driver_v3.5\src
 -I
 Additional include directories: (one per line)\
 -I
-C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\libraries\CMSIS\DeviceSupport\
+C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\libraries\CMSIS\DeviceSupport\
 -I
-C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\libraries\CMSIS\DeviceSupport\Startup\
+C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\libraries\CMSIS\DeviceSupport\Startup\
 -I
-C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\
+C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\
 -I
-C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\src\
+C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\src\
 -I
-C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\user\
+C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\user\
 -I
-C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\user\inc\
+C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\user\inc\
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\CMSIS\Core\Include\
 -I
@@ -33,19 +33,19 @@ C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\inc
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\inc\c
 -I
-C:\WINDOWS\system32\Additional include directories: (one per line)
+C:\Windows\System32\Additional include directories: (one per line)
 -I
-C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\libraries\CMSIS\DeviceSupport
+C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\libraries\CMSIS\DeviceSupport
 -I
-C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\libraries\CMSIS\DeviceSupport\Startup
+C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\libraries\CMSIS\DeviceSupport\Startup
 -I
-C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc
+C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc
 -I
-C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\src
+C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\src
 -I
-C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\user
+C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\user
 -I
-C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\user\inc
+C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\user\inc
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\CMSIS\Core\Include
 -I
