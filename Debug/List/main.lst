@@ -1,0 +1,162 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V8.50.6.265/W32 for ARM         16/Sep/2020  00:44:17
+# Copyright 1999-2020 IAR Systems AB.
+#
+#    Cpu mode             
+#    Endian            =  little
+#    Source file       =
+#        C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\user\main.c
+#    Command line      =
+#        -f C:\Users\WINDOW~1\AppData\Local\Temp\EW8674.tmp
+#        (C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\user\main.c
+#        -D USE_STDPERIPH_DRIVER -D STM32F10X_CL -lC
+#        C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\Debug\List
+#        -o
+#        C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\Debug\Obj
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M3 -e --fpu=None --dlib_config "C:\Program Files
+#        (x86)\IAR Systems\Embedded Workbench
+#        8.4\arm\inc\c\DLib_Config_Normal.h" -I "Additional include
+#        directories: (one per line)\\" -I
+#        C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\libraries\CMSIS\DeviceSupport\\
+#        -I
+#        C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\libraries\CMSIS\DeviceSupport\Startup\\
+#        -I
+#        C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\\
+#        -I
+#        C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\src\\
+#        -I C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\user\\
+#        -I
+#        C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\user\inc\\
+#        -Ol -I "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        8.4\arm\CMSIS\Core\Include\\" -I "C:\Program Files (x86)\IAR
+#        Systems\Embedded Workbench 8.4\arm\CMSIS\DSP\Include\\")
+#    Locale            =  C
+#    List file         =
+#        C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\Debug\List\main.lst
+#    Object file       =
+#        C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\Debug\Obj\main.o
+#    Runtime model:       
+#      __SystemLibrary =  DLib
+#      __dlib_version  =  6
+#      __size_limit    =  32768|ARM.EW.LINKER
+#
+###############################################################################
+
+C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\user\main.c
+      1          #include "stm32f10x.h"
+      2          #define GPIO_enable (*(volatile unsigned int*)0x40021018) 
+      3          #define GPIOd_BSRR (*(volatile unsigned int*)0x40011410)
+      4          #define GPIOd_CRL (*(volatile unsigned int*)0x40011400)
+      5          #define GPIOd_ODR (*(volatile unsigned int*)0x4001140C)
+      6          #define GPIOc_CRL (*(volatile unsigned int*)0x40011000)
+      7          #define GPIOc_IDR (*(volatile unsigned int*)0x40011008)
+      8          
+
+   \                                 In section .text, align 4, keep-with-next
+      9          int main(){
+     10          	GPIO_enable = 0x38;
+   \                     main: (+1)
+   \        0x0   0x2038             MOVS     R0,#+56
+   \        0x2   0x4917             LDR.N    R1,??main_0      ;; 0x40021018
+   \        0x4   0x6008             STR      R0,[R1, #+0]
+     11          	GPIOd_CRL = 0x10011100;
+   \        0x6   0x4817             LDR.N    R0,??main_0+0x4  ;; 0x10011100
+   \        0x8   0x4917             LDR.N    R1,??main_0+0x8  ;; 0x40011400
+   \        0xA   0x6008             STR      R0,[R1, #+0]
+     12          	GPIOd_BSRR = 0x10011100;
+   \        0xC   0x4917             LDR.N    R1,??main_0+0xC  ;; 0x40011410
+   \        0xE   0x6008             STR      R0,[R1, #+0]
+     13                  
+     14                  GPIOc_CRL = 0x888800;
+   \       0x10   0x4817             LDR.N    R0,??main_0+0x10  ;; 0x888800
+   \       0x12   0x4918             LDR.N    R1,??main_0+0x14  ;; 0x40011000
+   \       0x14   0x6008             STR      R0,[R1, #+0]
+   \       0x16   0xE004             B.N      ??main_1
+     15                  
+     16          	while (1) {
+     17                    if((GPIOc_IDR & 0x04) == 0 ){
+     18                      GPIOd_ODR |= 0x90;  // PD4 7 on
+   \                     ??main_2: (+1)
+   \       0x18   0x4817             LDR.N    R0,??main_0+0x18  ;; 0x4001140c
+   \       0x1A   0x6801             LDR      R1,[R0, #+0]
+   \       0x1C   0xF051 0x0190      ORRS     R1,R1,#0x90
+   \       0x20   0x6001             STR      R1,[R0, #+0]
+     19                    }
+   \                     ??main_1: (+1)
+   \       0x22   0x4816             LDR.N    R0,??main_0+0x1C  ;; 0x40011008
+   \       0x24   0x6801             LDR      R1,[R0, #+0]
+   \       0x26   0x0749             LSLS     R1,R1,#+29
+   \       0x28   0xD5F6             BPL.N    ??main_2
+     20                    else if((GPIOc_IDR & 0x08) == 0 ){
+   \       0x2A   0x6801             LDR      R1,[R0, #+0]
+   \       0x2C   0x0709             LSLS     R1,R1,#+28
+   \       0x2E   0xD405             BMI.N    ??main_3
+     21                      GPIOd_ODR &= ~0x90;  // PD 4 7 off
+   \       0x30   0x4811             LDR.N    R0,??main_0+0x18  ;; 0x4001140c
+   \       0x32   0x6801             LDR      R1,[R0, #+0]
+   \       0x34   0xF031 0x0190      BICS     R1,R1,#0x90
+   \       0x38   0x6001             STR      R1,[R0, #+0]
+   \       0x3A   0xE7F2             B.N      ??main_1
+     22                    }
+     23                    else if((GPIOc_IDR & 0x10) == 0 ){
+   \                     ??main_3: (+1)
+   \       0x3C   0x6801             LDR      R1,[R0, #+0]
+   \       0x3E   0x06C9             LSLS     R1,R1,#+27
+   \       0x40   0xD405             BMI.N    ??main_4
+     24                      GPIOd_ODR &= ~0x0C;  // PD 2 3 off
+   \       0x42   0x480D             LDR.N    R0,??main_0+0x18  ;; 0x4001140c
+   \       0x44   0x6801             LDR      R1,[R0, #+0]
+   \       0x46   0xF031 0x010C      BICS     R1,R1,#0xC
+   \       0x4A   0x6001             STR      R1,[R0, #+0]
+   \       0x4C   0xE7E9             B.N      ??main_1
+     25                    }
+     26                    else if((GPIOc_IDR & 0x20) == 0 ) {
+   \                     ??main_4: (+1)
+   \       0x4E   0x6800             LDR      R0,[R0, #+0]
+   \       0x50   0x0680             LSLS     R0,R0,#+26
+   \       0x52   0xD4E6             BMI.N    ??main_1
+     27                      GPIOd_ODR |= 0x0C;  //  PD 2 3 on
+   \       0x54   0x4808             LDR.N    R0,??main_0+0x18  ;; 0x4001140c
+   \       0x56   0x6801             LDR      R1,[R0, #+0]
+   \       0x58   0xF051 0x010C      ORRS     R1,R1,#0xC
+   \       0x5C   0x6001             STR      R1,[R0, #+0]
+   \       0x5E   0xE7E0             B.N      ??main_1
+   \                     ??main_0:
+   \       0x60   0x4002'1018        DC32     0x40021018
+   \       0x64   0x1001'1100        DC32     0x10011100
+   \       0x68   0x4001'1400        DC32     0x40011400
+   \       0x6C   0x4001'1410        DC32     0x40011410
+   \       0x70   0x0088'8800        DC32     0x888800
+   \       0x74   0x4001'1000        DC32     0x40011000
+   \       0x78   0x4001'140C        DC32     0x4001140c
+   \       0x7C   0x4001'1008        DC32     0x40011008
+     28                    }
+     29                  }
+     30                  return 0;
+                         ^
+Warning[Pe111]: statement is unreachable
+     31          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   main
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+     128  main
+
+ 
+ 128 bytes in section .text
+ 
+ 128 bytes of CODE memory
+
+Errors: none
+Warnings: 1
