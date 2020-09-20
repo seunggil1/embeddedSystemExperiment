@@ -1,7 +1,7 @@
 stm32f10x_rtc.pbi: \
-  C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\Libraries\STM32F10x_StdPeriph_Driver_v3.5\src\stm32f10x_rtc.c \
-  C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_rtc.h \
-  C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\libraries\CMSIS\DeviceSupport\stm32f10x.h \
+  C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\Libraries\STM32F10x_StdPeriph_Driver_v3.5\src\stm32f10x_rtc.c \
+  C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_rtc.h \
+  C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\libraries\CMSIS\DeviceSupport\stm32f10x.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\CMSIS\Core\Include\core_cm3.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\stdint.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\ycheck.h \
@@ -13,27 +13,27 @@ stm32f10x_rtc.pbi: \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\CMSIS\Core\Include/cmsis_compiler.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\CMSIS\Core\Include\cmsis_iccarm.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\iccarm_builtin.h \
-  C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\libraries\CMSIS\DeviceSupport/system_stm32f10x.h \
-  C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\user\inc\stm32f10x_conf.h \
-  C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_adc.h \
-  C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_bkp.h \
-  C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_can.h \
-  C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_cec.h \
-  C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_crc.h \
-  C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_dac.h \
-  C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_dbgmcu.h \
-  C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_dma.h \
-  C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_exti.h \
-  C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_flash.h \
-  C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_fsmc.h \
-  C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_gpio.h \
-  C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_i2c.h \
-  C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_iwdg.h \
-  C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_pwr.h \
-  C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_rcc.h \
-  C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_sdio.h \
-  C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_spi.h \
-  C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_tim.h \
-  C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_usart.h \
-  C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_wwdg.h \
-  C:\Users\WINDOWS10\Documents\GitHub\embeddedsystemexperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\misc.h
+  C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\libraries\CMSIS\DeviceSupport/system_stm32f10x.h \
+  C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\user\inc\stm32f10x_conf.h \
+  C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_adc.h \
+  C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_bkp.h \
+  C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_can.h \
+  C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_cec.h \
+  C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_crc.h \
+  C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_dac.h \
+  C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_dbgmcu.h \
+  C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_dma.h \
+  C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_exti.h \
+  C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_flash.h \
+  C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_fsmc.h \
+  C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_gpio.h \
+  C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_i2c.h \
+  C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_iwdg.h \
+  C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_pwr.h \
+  C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_rcc.h \
+  C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_sdio.h \
+  C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_spi.h \
+  C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_tim.h \
+  C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_usart.h \
+  C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\stm32f10x_wwdg.h \
+  C:\Users\seung\Documents\GitHub\embeddedSystemExperiment\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\misc.h
