@@ -58,10 +58,13 @@ int main(){
           if(state12)
             GPIOd_ODR |= 0x90;  //  PortD 4, 7 on
  
-          delay();
-          GPIOd_ODR &= ~0x0C;  //  PortD 2, 3 off
-          GPIOd_ODR &= ~0x90;  //  PortD 4, 7 off
-          delay();
+          if(state11 || state12){
+            delay();
+            GPIOd_ODR &= ~0x0C;  //  PortD 2, 3 off
+            GPIOd_ODR &= ~0x90;  //  PortD 4, 7 off
+            delay();
+          }
+
         }
     
     
