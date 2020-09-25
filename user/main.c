@@ -13,8 +13,11 @@
 #define GPIOc_BSRR (*(volatile unsigned int*)0x40011010) // GPIO C input register
 
 void delay(){
+  bool isChanged11 = false;
+  bool isChanged12 = false;
   int i;
-  for(i=0 ; i < 10000000;i++){}
+  for(i=0 ; i < 10000000;i++){
+  }
 }
 
 int main(){
@@ -34,6 +37,8 @@ int main(){
    while (1) {
           if((GPIOc_IDR & 0x04) == 0 ){       // 조이스틱이 down인 경우 prot C의 2GPIO C input register번 임으로 0x04로 & 해서 알 수 있다.
             GPIOd_ODR &= ~ 0x9C;           // PortD 2,3,4,7  off     
+            state11 = false;
+            state12 = false;
           }
            else if((GPIOc_IDR & 0x08) == 0 ){    // 조이스틱이 Left인 경우 
             GPIOc_BSRR |= ~0x200; 
