@@ -13,8 +13,6 @@
 #define GPIOc_BSRR (*(volatile unsigned int*)0x40011010) // GPIO C input register
 
 void delay(){
-  bool isChanged11 = false;
-  bool isChanged12 = false;
   int i;
   for(i=0 ; i < 10000000;i++){
   }
