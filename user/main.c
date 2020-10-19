@@ -7,7 +7,7 @@ void SysInit(void) {
 
     /* Reset SW, HPRE, PPRE1, PPRE2, ADCPRE and MCO bits */
     RCC->CFGR &= (uint32_t)0xF0FF0000;
-    
+
     /* Reset HSEON, CSSON and PLLON bits */
     RCC->CR &= (uint32_t)0xFEF6FFFF;
 
@@ -55,17 +55,18 @@ void SetSysClock(void) {
 //@TODO - 1 Set the clock
         /* HCLK = SYSCLK */
         RCC->CFGR |= (uint32_t)RCC_CFGR_HPRE_DIV1;
+        
         /* PCLK2 = HCLK / ?, use PPRE2 */
-        //RCC->CFGR |= (uint32_t)RCC_CFGR_PPRE2_DIV1;
+        RCC->CFGR |= (uint32_t)RCC_CFGR_PPRE2_DIV1;
         /* PCLK1 = HCLK */
         RCC->CFGR |= (uint32_t)RCC_CFGR_PPRE1_DIV1;
 
         /* Configure PLLs ------------------------------------------------------*/
         RCC->CFGR &= (uint32_t)~(RCC_CFGR_PLLXTPRE | RCC_CFGR_PLLSRC | RCC_CFGR_PLLMULL);
-        //RCC->CFGR |= (uint32_t)(RCC_CFGR_PLLXTPRE_PREDIV1 | RCC_CFGR_PLLSRC_PREDIV1 | RCC_CFGR_PLLMULL1);
+        RCC->CFGR |= (uint32_t)(RCC_CFGR_PLLXTPRE_PREDIV1 | RCC_CFGR_PLLSRC_PREDIV1 | RCC_CFGR_PLLMULL6 | RCC_CFGR_MCO_SYSCLK);
 
-        RCC->CFGR2 &= (uint32_t)~(RCC_CFGR2_PREDIV2 | RCC_CFGR2_PLL2MUL | RCC_CFGR2_PREDIV1 | RCC_CFGR2_PREDIV1SRC);
-        //RCC->CFGR2 |= (uint32_t)(RCC_CFGR2_PREDIV2_DIV1 | RCC_CFGR2_PLL2MUL1 | RCC_CFGR2_PREDIV1SRC_PLL2 | RCC_CFGR2_PREDIV1_DIV1);
+        RCC->CFGR2 &= (uint32_t)~(RCC_CFGR2_PREDIV1 | RCC_CFGR2_PLL2MUL | RCC_CFGR2_PREDIV1 | RCC_CFGR2_PREDIV1SRC);
+        RCC->CFGR2 |= (uint32_t)(RCC_CFGR2_PREDIV2_DIV10 | RCC_CFGR2_PLL2MUL8 | RCC_CFGR2_PREDIV1SRC_PLL2 | RCC_CFGR2_PREDIV1_DIV6);
 //@End of TODO - 1
 
         /* Enable PLL2 */
@@ -90,7 +91,7 @@ void SetSysClock(void) {
         /* Select System Clock as output of MCO */
 //@TODO - 2 Set the MCO port for system clock output
         RCC->CFGR &= ~(uint32_t)RCC_CFGR_MCO;
-        // RCC->CFGR |= ??
+        RCC->CFGR |= RCC_CFGR_MCO_2;
 //@End of TODO - 2
     }
     else {
@@ -104,30 +105,30 @@ void RCC_Enable(void) {
     /*---------------------------- RCC Configuration -----------------------------*/
     /* GPIO RCC Enable  */
     /* UART Tx, Rx, MCO port */
-    //RCC->APB2ENR |= ??
+     RCC->APB2ENR |= RCC_APB2ENR_IOPAEN; 
+     RCC->APB2ENR |= RCC_APB2ENR_IOPBEN; 
+     
     /* USART RCC Enable */
-    // RCC->APB2ENR |= ??
+     RCC->APB2ENR |= RCC_APB2ENR_USART1EN;
 }
 
 void PortConfiguration(void) {
 //@TODO - 4 GPIO Configuration
     /* Reset(Clear) Port A CRH - MCO, USART1 TX,RX*/
     GPIOA->CRH &= ~(
-	    (GPIO_CRH_CNF8 | GPIO_CRH_MODE8) |
-	    (GPIO_CRH_CNF9 | GPIO_CRH_MODE9) |
-	    (GPIO_CRH_CNF10 | GPIO_CRH_MODE10)
-	);
+       (GPIO_CRH_CNF8 | GPIO_CRH_MODE8) |
+       (GPIO_CRH_CNF9 | GPIO_CRH_MODE9) |
+       (GPIO_CRH_CNF10 | GPIO_CRH_MODE10)
+   );
     /* MCO Pin Configuration */
-    // GPIOA->CRH |= ??
+    GPIOA->CRH |= 0xB;
     /* USART Pin Configuration */
-    // GPIOA->CRH |= ??
+    GPIOA->CRH |= 0x8B0; 
     
-    /* Reset(Clear) Port D CRH - User S1 Button */
-    // GPIOD->CRH &= ??
-    /* User S1 Button Configuration */
-    // GPIOD->CRH |= ??
+    /* Reset(Clear) Port B CRH - Select Button*/
+    GPIOB->CRH &= ~(GPIO_CRH_CNF8 );
+    GPIOB->CRH |= 0x8;
 }
-
 void UartInit(void) {
     /*---------------------------- USART CR1 Configuration -----------------------*/
     /* Clear M, PCE, PS, TE and RE bits */
@@ -135,13 +136,15 @@ void UartInit(void) {
     /* Configure the USART Word Length, Parity and mode ----------------------- */
     /* Set the M bits according to USART_WordLength value */
 //@TODO - 6: WordLength : 8bit
+//    USART1->CR1 |= 
     
     /* Set PCE and PS bits according to USART_Parity value */
 //@TODO - 7: Parity : None
-    
+//    USART1->CR1 |= 
     /* Set TE and RE bits according to USART_Mode value */
 //@TODO - 8: Enable Tx and Rx
-    // USART1->CR1 |= ??
+     USART1->CR1 |= USART_CR1_TE | USART_CR1_RE;
+
 
     /*---------------------------- USART CR2 Configuration -----------------------*/
     /* Clear STOP[13:12] bits */
@@ -165,13 +168,14 @@ void UartInit(void) {
     /* Determine the integer part */
     /* Determine the fractional part */
 //@TODO - 11: Calculate & configure BRR
-    // USART1->BRR |= ??
+     USART1->BRR |= 0xAE; //강의자료 27p 
 
     /*---------------------------- USART Enable ----------------------------------*/
     /* USART Enable Configuration */
-//@TODO - 12: Enable UART (UE)
-    // USART1->CR1 |= ??
+//@TODO - 12: Enable USART (UE)
+    USART1->CR1 |= USART_CR1_UE; //enable usart
 }
+
 
 void delay(void){
     int i = 0;
@@ -180,16 +184,17 @@ void delay(void){
 
 void SendData(uint16_t data) {
     /* Transmit Data */
-	USART1->DR = data;
+   USART1->DR = data;
 
-	/* Wait till TC is set */
-	while ((USART1->SR & USART_SR_TC) == 0);
+   /* Wait till TC is set */
+   while ((USART1->SR & USART_SR_TC) == 0);
 }
 
 int main() {
-	int i;
-	char msg[] = "Hello Team03\r\n";
-	
+   int i;
+        int cnt=0;
+   char msg[] = "Hello Team03\r\nAEG\r\nEHE\r\nKSG\r\nKSH\r\n";
+   
     SysInit();
     SetSysClock();
     RCC_Enable();
@@ -197,11 +202,24 @@ int main() {
     UartInit();
     
     // if you need, init pin values here
-    
+    SendData('\0');
     
     while (1) {
-		//@TODO - 13: Send the message when button is pressed
-		
-	}
-
+      //@TODO - 13: Send the message when button is pressed
+      if(!(GPIOB->IDR & (GPIO_IDR_IDR8))){
+        if(cnt==0){
+          for(i = 0; i < 14; i++)
+            SendData(msg[i]);
+        }
+        else{
+          for(i = 14+5*(cnt-1); i < 14+5*(cnt); i++){
+            SendData(msg[i]);
+          }
+        }
+        delay();
+        cnt++;
+        cnt = cnt%5;
+      }
+    }
+      
 }// end main
