@@ -52,14 +52,11 @@ void USART_Configure() {
         
         //USART2 ¼³Á¤
         USART_Init(USART2, &usart);
-        USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);
+        USART_ITConfig(USART2, USART_IT_RXNE, ENABLE);
         EXTI_ClearITPendingBit(USART_IT_RXNE);
         USART_Cmd(USART2, ENABLE);
         
 }
-void EXTI_Configure() {
-}
-
 void NVIC_Configure() {
    /*TODO: NVIC_configuration */
         NVIC_InitTypeDef nvic;
@@ -105,7 +102,6 @@ void USART2_IRQHandler(void) {
   }
   USART_ClearITPendingBit(USART2, USART_IT_RXNE);
 }
-
 
 
 int main() {
